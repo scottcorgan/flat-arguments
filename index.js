@@ -1,13 +1,18 @@
 var asArray = require('as-array');
 var flatten = require('flatten');
-var isArgs = require('is-args');
+var isArguments = require('lodash.isarguments');
 
 var flattenArguments = function () {
   var args = arguments;
   
-  if (isArgs(arguments[0])) args = arguments[0];
+  if (isArguments(arguments[0])) args = arguments[0];
+  
+  args = asArray(args).map(function (arg) {
+    if (!isArguments(arg)) return arg;
+    return asArray(arg);
+  });
     
-  return flatten(asArray(args));
+  return flatten(args);
 };
 
 module.exports = flattenArguments;

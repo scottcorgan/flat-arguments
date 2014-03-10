@@ -3,9 +3,6 @@ var lab = require('lab');
 var describe = lab.experiment;
 var it = lab.test;
 var expect = lab.expect;
-var beforeEach = lab.beforeEach;
-var afterEach = lab.afterEach;
-
 
 describe('flattening', function () {
   
@@ -67,6 +64,20 @@ describe('flattening', function () {
     }
     
     tester([['arg1', 'arg2'], 'arg3']);
+  });
+  
+  it('flattens an arguments array when passed through another function', function (done) {
+    function tester () {
+      var args = flatten(arguments);
+      expect(args).to.eql(['arg1', 'arg2']);
+      done();
+    }
+    
+    function passer () {
+      tester(arguments);
+    }
+    
+    passer(['arg1', 'arg2']);
   });
   
 });
