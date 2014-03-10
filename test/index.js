@@ -80,4 +80,23 @@ describe('flattening', function () {
     passer(['arg1', 'arg2']);
   });
   
+  it('flattens an arguments array when passed through "N" number of functions', function (done) {
+    function tester () {
+      var args = flatten(arguments);
+      expect(args).to.eql(['arg1', 'arg2']);
+      done();
+    }
+    
+    function passer2 () {
+      tester(arguments);
+    }
+    
+    function passer1 () {
+      passer2(arguments);
+    }
+    
+    
+    passer1(['arg1', 'arg2']);
+  });
+  
 });
