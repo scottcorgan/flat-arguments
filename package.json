@@ -1,0 +1,33 @@
+{
+  "name": "flat-arguments",
+  "version": "0.1.0",
+  "description": "Flatten a function's argument. Like, really flatten",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottcorgan/flat-arguments.git"
+  },
+  "keywords": [
+    "flat",
+    "flatten",
+    "arguments",
+    "function"
+  ],
+  "author": "Scott Corgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottcorgan/flat-arguments/issues"
+  },
+  "homepage": "https://github.com/scottcorgan/flat-arguments",
+  "devDependencies": {
+    "lab": "1.8.x"
+  },
+  "dependencies": {
+    "as-array": "0.1.x",
+    "flatten": "0.0.1",
+    "is-args": "0.0.1"
+  }
+}
