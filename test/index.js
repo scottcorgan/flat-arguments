@@ -39,6 +39,16 @@ describe('flattening', function () {
     tester();
   });
   
+  it('flattens a combination of arrays and strings', function (done) {
+    function tester () {
+      var args = flatten(arguments);
+      expect(args).to.eql(['arg1', 'arg2', 'arg3']);
+      done();
+    }
+    
+    tester(['arg1', 'arg2'], 'arg3');
+  });
+  
   it('flattens an arguments array to a flat array', function (done) {
     function tester () {
       var args = flatten(arguments);
