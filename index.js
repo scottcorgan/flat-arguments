@@ -1,5 +1,5 @@
 var asArray = require('as-array');
-var flatten = require('flatten');
+var flatten = require('array-flatten');
 var isArguments = require('lodash.isarguments');
 var isObject = require('lodash.isobject');
 
