@@ -1,6 +1,6 @@
 {
   "name": "flat-arguments",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Flatten a function's argument. Like, really flatten",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
   "dependencies": {
     "array-flatten": "^1.0.0",
     "as-array": "^1.0.0",
-    "lodash.isarguments": "^2.4.1",
-    "lodash.isobject": "^2.4.1"
+    "lodash.isarguments": "^3.0.0",
+    "lodash.isobject": "^3.0.0"
   }
 }
